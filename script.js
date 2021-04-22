@@ -8,7 +8,6 @@ const clicking =  async() => {
          .then(json => {
            console.log(json)
            displayFilms(json)  
-           
          }) 
          
 }
@@ -26,7 +25,7 @@ for(let film of films){
     card_body.className = "card-body"
 
     card_header.innerText = `${film.title} (${film.release_date})`
-    card_body.innerText = film.description,`${film.rt_score}`
+    card_body.innerText = `${film.description} / ROTTEN TOMATO SCORE: ${film.rt_score}`
 
 
     card.appendChild(card_header)
@@ -35,14 +34,3 @@ for(let film of films){
     wrapper.appendChild(card)
 }
 }
-/*
-<div class="card">
-    <div class="card-header">
-        TITLE / YEAR
-    </div>
-    <div class="card-body">
-          details
-    </div>
-      </div>
-
-*/
